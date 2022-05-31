@@ -6,8 +6,10 @@ const options = {
     useUnifiedTopology: true,
 };
 
-function dbConnection(){
+function dbConnection() {
     mongoose.connect(connectionString, options)
+        .then(() => console.log('Mongo connection OK'))
+        .catch(err => console.log(err))
 }
 
 module.exports = dbConnection;
