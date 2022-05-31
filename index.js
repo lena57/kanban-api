@@ -2,10 +2,12 @@ const express = require('express'); // the same as import express from 'express'
 
 const routes = require("./routes");
 const bodyParser = require("./bodyParser");
+const dbConnection = require("./dbConnection");
 
 const app = express();
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
+dbConnection();
 bodyParser(app);
 routes(app);
 
