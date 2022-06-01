@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = 'mongodb+srv://lena_mas:Uspech1!@cluster0.4nyxyyp.mongodb.net/?retryWrites=true&w=majority';
+const connectionString = 'mongodb+srv://lena_mas:Uspech1!@cluster0.4nyxyyp.mongodb.net/kanban?retryWrites=true&w=majority';
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
