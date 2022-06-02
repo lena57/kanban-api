@@ -17,9 +17,14 @@ app.listen(PORT, () => {
 })
 
 console.log('START')
- const res = axios({
-     method: 'GET',
-     url: 'https://lena-kanban.herokuapp.com/cards'
- })
-     .then(res => console.log(res.data));
-console.log('END')
+result = axios({
+    method: 'GET',
+    url: 'https://express-demo-lena.herokuapp.com',   //'https://lena-kanban.herokuapp.com/cards',
+    data: {
+        name: 'Masha',
+        id: '34'
+    }
+})
+    .then(res => console.log(res.data))
+    .catch(err => 'ERROR ' + err);
+console.log('end')
